@@ -21,6 +21,11 @@ class Api::UsersController < ApplicationController
     end
   end
 
+  def show
+    @user = User.find(params[:user])
+    render "api/users/show"
+  end
+
 
   def user_params
     params.require(:user).permit(:username, :email, :password, :photo)

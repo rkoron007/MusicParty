@@ -4,8 +4,8 @@
   "description": "Shake your Music Thang!",
   "main": "entry.js",
   "engines": {
-    "node": "6.10.1",
-    "npm": "3.10.10"
+    "node": "8.9.4",
+    "npm": "5.6.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -16,6 +16,7 @@
     "@babel/core": "^7.1.2",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
+    "axios": "^0.18.0",
     "babel-loader": "^8.0.4",
     "lodash": "^4.17.11",
     "react": "^16.5.2",
