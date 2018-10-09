@@ -1,16 +1,16 @@
-import {axios} from "axios";
+// import {axios} from "axios";
 
 export const fetchUser = (id) => (
-  axios.get(`users/${id}`)
+  $.ajax({method:'get', url: `users/${id}`})
 );
 
-export const createUser = (user) => (
-  axios({
+export const createUser = (user) => {
+  return $.ajax({
     method: 'post',
-    url: '/users',
+    url: '/api/users',
     data: {user}
-  })
-);
+  });
+};
 
 export const updateUser = (user) => (
   axios({

@@ -21,8 +21,7 @@ export const receiveSingleUser = (user) => (dispatch) => (
 
 
 export const createNewUser = (user) => (dispatch) => (
-  createUser(user).then((res) => {
-  // debugger
-    return dispatch(receiveCurrentUser(res.data.user))
+  createUser(user).then((user) => {
+    return dispatch(receiveCurrentUser(user));
   })
 );

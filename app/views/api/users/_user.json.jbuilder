@@ -1,2 +1,5 @@
 json.extract! user, :id, :username, :email
-json.image_url url_for(user.photo)
+
+# if user.photo
+  # json.image_url url_for(user.photo)
+# end

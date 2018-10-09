@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from "./components/app";
-import { createNewUser } from "./actions/user_actions";
+import Root from "./components/root.js";
 import { configureStore } from "./store/store";
+
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -22,9 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     store = configureStore();
   }
-
-  window.store = store;
-  window.createNewUser = createNewUser;
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store}/>, root);
 });

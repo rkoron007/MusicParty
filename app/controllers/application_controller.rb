@@ -1,9 +1,9 @@
 class ApplicationController < ActionController::Base
-  # helper_method :current_user, :logged_in?
+  helper_method :current_user, :logged_in?
 
   # upcoming requests will have underscore params
-   before_action :underscore_params!
-   respond_to :json
+  # before_action :underscore_params!
+  # respond_to? :json
    
   def current_user
     @current_user ||= User.find_by(session_token: session[:session_token])
@@ -26,7 +26,7 @@ class ApplicationController < ActionController::Base
 
   # Incoming keys need to be changed into snack
 # https://thinkster.io/tutorials/rails-json-api/configuring-rails-as-a-json-api
-  def underscore_params!
-    params.deep_transform_keys!(&:underscore)
-  end
+  # def underscore_params!
+  #   params.deep_transform_keys!(&:underscore)
+  # end
 end
